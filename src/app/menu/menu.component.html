@@ -1,0 +1,71 @@
+<div class="menu-page">
+    <div class="heading-section">
+        <div class="heading">SASH SKY</div>
+        <div class="sub-heading">Menu</div>
+    </div>
+    <div class="body-section">
+        <form action="">
+            <mat-accordion class="menu-expansion-panel">
+                <mat-expansion-panel class="menu-panel" *ngFor="let food of sashSkyMenu">
+                    <mat-expansion-panel-header>
+                      <mat-panel-title class="menu-outer-title">
+                        {{food.name}}
+                      </mat-panel-title>
+                      <mat-panel-description class="menu-outer-description">
+                        {{food.description}}
+                      </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <div class="menu-inner-section" *ngFor="let dish of food.dishes">
+                        <div class="details-section">
+                           <p class="name"> {{dish.name}} </p>
+                           <p class="description"> {{dish.description}} </p>
+                        </div>
+                        <div class="pricing-section">
+                            <p class="price"> {{dish.price}} </p>
+                        </div>
+                    </div>
+                  </mat-expansion-panel>
+            </mat-accordion>
+            <!-- <mat-accordion>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Appetizers
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Enjoy our fresh appetizers
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <mat-selection-list #appetizers>
+                    <mat-list-option *ngFor="let food of allFoodItems">
+                        {{food}}
+                    </mat-list-option>
+                  </mat-selection-list> 
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Starters
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        Enjoy our starters
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <mat-selection-list #foods>
+                    <mat-list-option *ngFor="let food of allFoodItems">
+                        {{food}}
+                    </mat-list-option>
+                  </mat-selection-list> 
+                </mat-expansion-panel>
+              </mat-accordion>  -->
+        </form>
+        
+        <!-- <p>
+            Options selected: {{appetizers.selectedOptions.selected.length}}
+            <ng-container *ngFor="let item of dataSource; index as i">
+                {{ item.name }}
+            </ng-container>
+        </p> -->
+    </div>
+</div>
+  
