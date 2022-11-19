@@ -1,11 +1,24 @@
 <div class="menu-page">
     <div class="heading-section">
-        <div class="heading">SASH SKY</div>
+        <div class="wrapper">
+            <video onloadedmetadata="this.muted=true" autoplay muted loop preload #videoPlayer>
+            <source src="https://storage.coverr.co/videos/7RzPQrmB00s01rknm8VJnXahEyCy4024IMG?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjI5MTg2NjA0fQ.M8oElp5VNO8bWEWmdF2nGiu3qDOOYRFfP8wkKvl8I20" />
+            </video>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 285 80" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <mask id="mask" x="0" y="0" width="100%" height="100%" >
+                <rect x="0" y="0" width="100%" height="100%" />
+                <text x="80" y="50">SASH SKY</text>
+              </mask>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" />
+          </svg>
+        </div>
         <div class="sub-heading">Menu</div>
     </div>
     <div class="body-section">
         <form action="">
-            <mat-accordion class="menu-expansion-panel">
+            <mat-accordion class="menu-expansion-panel" multi>
                 <mat-expansion-panel class="menu-panel" *ngFor="let food of sashSkyMenu">
                     <mat-expansion-panel-header>
                       <mat-panel-title class="menu-outer-title">
@@ -15,57 +28,20 @@
                         {{food.description}}
                       </mat-panel-description>
                     </mat-expansion-panel-header>
-                    <div class="menu-inner-section" *ngFor="let dish of food.dishes">
-                        <div class="details-section">
-                           <p class="name"> {{dish.name}} </p>
-                           <p class="description"> {{dish.description}} </p>
-                        </div>
-                        <div class="pricing-section">
-                            <p class="price"> {{dish.price}} </p>
-                        </div>
+                    <div class="menu-inner-section" *ngFor="let dish of food.dishes" [ngClass]="(dish.diet=='N')?'non-veg-diet':'veg-diet'">
+                        <ng-container >
+                            <div class="details-section">
+                                <p class="name"> {{dish.name}} </p>
+                                <p class="description"> {{dish.description}} </p>
+                             </div>
+                             <div class="pricing-section">
+                                 <p class="price"> {{dish.price}} </p>
+                             </div>
+                        </ng-container>
                     </div>
                   </mat-expansion-panel>
             </mat-accordion>
-            <!-- <mat-accordion>
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <mat-panel-title>
-                      Appetizers
-                    </mat-panel-title>
-                    <mat-panel-description>
-                      Enjoy our fresh appetizers
-                    </mat-panel-description>
-                  </mat-expansion-panel-header>
-                  <mat-selection-list #appetizers>
-                    <mat-list-option *ngFor="let food of allFoodItems">
-                        {{food}}
-                    </mat-list-option>
-                  </mat-selection-list> 
-                </mat-expansion-panel>
-                <mat-expansion-panel>
-                  <mat-expansion-panel-header>
-                    <mat-panel-title>
-                      Starters
-                    </mat-panel-title>
-                    <mat-panel-description>
-                        Enjoy our starters
-                    </mat-panel-description>
-                  </mat-expansion-panel-header>
-                  <mat-selection-list #foods>
-                    <mat-list-option *ngFor="let food of allFoodItems">
-                        {{food}}
-                    </mat-list-option>
-                  </mat-selection-list> 
-                </mat-expansion-panel>
-              </mat-accordion>  -->
         </form>
-        
-        <!-- <p>
-            Options selected: {{appetizers.selectedOptions.selected.length}}
-            <ng-container *ngFor="let item of dataSource; index as i">
-                {{ item.name }}
-            </ng-container>
-        </p> -->
     </div>
 </div>
   
