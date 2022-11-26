@@ -83,6 +83,10 @@
             .menu-panel {
                 margin: 10px 0;
 
+                .mat-expansion-panel-header {
+                    padding: 10px 24px;
+                }
+
                 .menu-outer-title {
                     font-size: $title-fontsize;
                     font-weight: $dark;
@@ -98,7 +102,7 @@
                     justify-content: space-between;
                     align-items: center;
                     gap: 10px;
-                    
+
                     .details-section {
                         padding: 10px 0;
 
