@@ -3,7 +3,7 @@
 
 .home-page {
     text-align: center;
-    background: linear-gradient(#030321, rgb(215 198 198 / 57%)), url(https://lh5.googleusercontent.com/p/AF1QipOSs-sZFfMVQAov64rJSwSP4JkhS5im6_ntFGnC=w408-h544-k-no);
+    background: linear-gradient(#030321, rgb(215 198 198 / 57%)), url("../../assets/images/Background.jpg");
     background-size: cover;
     background-position: 50% 0;
     height: 100%;
@@ -65,7 +65,7 @@
 
     .body-section {
         position: absolute;
-        top: 60%;
+        top: 50%;
         width: 100%;
 
         .button-section {

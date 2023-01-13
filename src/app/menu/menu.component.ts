@@ -2,6 +2,9 @@ import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component, OnInit } from '@angular/core';
 import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { SASH_SKY_MENU } from '../utils/constants';
+import {ActivatedRoute} from '@angular/router';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +13,12 @@ import { SASH_SKY_MENU } from '../utils/constants';
 })
 
 export class MenuComponent implements OnInit {
-  constructor() {
+  constructor(route: ActivatedRoute) {
+    const a = route.params;
+    const outletId: Observable<string> = route.params.pipe(map(p => p['outletId']));
+    console.log('outletId',outletId);
+    console.log('a',a);
+    
   }
 
   sashSkyMenu: any[] = SASH_SKY_MENU;

@@ -692,7 +692,7 @@ export const SASH_SKY_MENU = [
             {   
                 id:702,
                 isSelected:false,
-                name:"Crispy cottage cheese",
+                name:"Crispy Cottage Cheese",
                 description:"Served with fries,salad and peri peri mayo",
                 price:"",
                 diet:"V",
@@ -728,7 +728,7 @@ export const SASH_SKY_MENU = [
                 id:801,
                 isSelected:false,
                 name:"Classic Penne",
-                description:"In white/red/pink sauce (Veg/Chciken/Prawn)",
+                description:"In white/red/pink sauce (Veg/Chicken/Prawn)",
                 price:"",
                 diet:"V",
                 availableOutlets:[2]
@@ -737,7 +737,7 @@ export const SASH_SKY_MENU = [
                 id:802,
                 isSelected:false,
                 name:"Spaghetti",
-                description:"In white/red/pink sauce (Veg/Chciken/Prawn)",
+                description:"In white/red/pink sauce (Veg/Chicken/Prawn)",
                 price:"",
                 diet:"V",
                 availableOutlets:[2]
@@ -746,7 +746,7 @@ export const SASH_SKY_MENU = [
                 id:803,
                 isSelected:false,
                 name:"Aglio-o-olio",
-                description:"In white/red/pink sauce (Veg/Chciken/Prawn)",
+                description:"In white/red/pink sauce (Veg/Chicken/Prawn)",
                 price:"",
                 diet:"V",
                 availableOutlets:[2]
